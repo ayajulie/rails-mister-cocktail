@@ -30,6 +30,8 @@ gem 'simple_form'
 
 gem 'dotenv-rails', groups: %i[development test]
 
+gem 'cloudinary', '~> 1.16.0'
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
