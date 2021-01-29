@@ -1,6 +1,14 @@
+<head>
+  <nav class="navbar bg-dark">
+    <h1><%= @cocktail.name %></h1>
+    <%= link_to "Back to all cocktails", root_path %>
+  </nav>
+</head>
 <div class="container">
-  <h1><%= @cocktail.name %></h1>
-  <%= link_to "Back to all cocktails", root_path %>
+  <div class= "bg-light">
+    <img src="<%= cl_image_path @cocktail.photo.key, height: 400, width: 400, gravity: 'east' %>" class="rounded  mx-auto d-block" alt="">
+  </div>
+  <br>
   <div class="row">
     <div class="col-sm-12 col-md-6">
       <h3>Recipe</h3>
@@ -29,6 +37,7 @@
       <%= render "doses/new", cocktail: @cocktail, dose: @dose %>
     </div>
   </div>
+  <br>
   <h3>Reviews</h3>
   <% if @cocktail.reviews.empty? %>
     <p>Leave a review</p>
